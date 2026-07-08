@@ -4,6 +4,11 @@ An intelligent AI-powered travel planning assistant designed specifically for wh
 
 
 
+<img width="1574" height="927" alt="Screenshot_1" src="https://github.com/user-attachments/assets/c0870608-cc86-4cb9-9012-f7799ee3123d" />
+
+
+
+
 ## Features
 
 - **AI-Powered Planning**: Uses Google Gemini 2.5 Flash for intelligent trip planning
