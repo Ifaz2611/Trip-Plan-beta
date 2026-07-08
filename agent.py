@@ -112,8 +112,10 @@ def ui_agent_runner(user_goal: str):
         yield "Failed to generate complete itinerary within step limits.", agent_logs
 
 # ==========================================
-# 3. GRADIO INTERFACE LAYOUT
+# 3. GRADIO UI INTERFACE LAYOUT
 # ==========================================
+
+
 with gr.Blocks(theme=gr.themes.Soft()) as demo:
     gr.Markdown("# Accessible Trip Planner Agent")
     gr.Markdown("Enter your destination goals below. The AI Agent will dynamically research accessibility details using live web search tools.")
