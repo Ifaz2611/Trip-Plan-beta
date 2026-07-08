@@ -14,6 +14,7 @@ client = genai.Client()
 # ==========================================
 # 1. DEFINE THE REAL TOOL (Web Search)
 # ==========================================
+
 def search_accessibility_info(location: str) -> str:
     """REAL TOOL: Searches the web for wheelchair accessibility info."""
     log_msg = f"[Tool Executed] Searching web for: {location} accessibility...\n"
@@ -39,6 +40,7 @@ tool_config = [search_accessibility_info]
 # ==========================================
 # 2. THE UI AGENT CONROLLER
 # ==========================================
+
 def ui_agent_runner(user_goal: str):
     """
     This function handles the Agent loop and yields updates 
@@ -102,18 +104,18 @@ def ui_agent_runner(user_goal: str):
             
         else:
             # Final Answer reached!
-            agent_logs += "\n✅ Final itinerary generated successfully!"
+            agent_logs += "\nFinal itinerary generated successfully!"
             yield response.text, agent_logs
             break
     else:
-        agent_logs += "\n⚠️ Hit maximum execution steps."
+        agent_logs += "\nHit maximum execution steps."
         yield "Failed to generate complete itinerary within step limits.", agent_logs
 
 # ==========================================
 # 3. GRADIO INTERFACE LAYOUT
 # ==========================================
 with gr.Blocks(theme=gr.themes.Soft()) as demo:
-    gr.Markdown("# 🗺️ Accessible Trip Planner Agent")
+    gr.Markdown("# Accessible Trip Planner Agent")
     gr.Markdown("Enter your destination goals below. The AI Agent will dynamically research accessibility details using live web search tools.")
     
     with gr.Row():

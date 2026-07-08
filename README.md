@@ -28,7 +28,7 @@ An intelligent AI-powered travel planning assistant designed specifically for wh
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Ifaz2611/Trip-Plan-beta
    cd accessibility_trip_planner
    ```
 
